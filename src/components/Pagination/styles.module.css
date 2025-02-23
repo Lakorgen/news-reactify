@@ -12,10 +12,6 @@
   background-color: white;
   cursor: pointer;
 }
-.pageNumber:disabled,
-.arrow:disabled {
-  cursor: default;
-}
 
 .pagination.dark .pageNumber,
 .pagination.dark .arrow {
@@ -30,6 +26,12 @@
 
 .pageNumber {
   padding: 8px;
+}
+
+.pagination .pageNumber:disabled,
+.pagination .arrow:disabled {
+  cursor: default;
+  opacity: 0.6;
 }
 
 .list {
