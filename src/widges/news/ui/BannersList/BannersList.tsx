@@ -1,4 +1,4 @@
-import { INews, NewsBanner } from "@/entities/news";
+import { INews, NewsCard } from "@/entities/news";
 import withSkeleton from "@/shared/hocs/withSkeleton";
 import styles from "./styles.module.css";
 
@@ -10,17 +10,12 @@ const BannersList = ({ banners }: Props) => {
   return (
     <ul className={styles.banners}>
       {banners?.map((banner) => {
-        return <NewsBanner key={banner.id} item={banner} />;
+        return <NewsCard key={banner.id} item={banner} type="banner" />;
       })}
     </ul>
   );
 };
 
-const BannersListWithSkeleton = withSkeleton<Props>(
-  BannersList,
-  "banner",
-  10,
-  "row"
-);
+const BannersListWithSkeleton = withSkeleton<Props>(BannersList, 10);
 
 export default BannersListWithSkeleton;

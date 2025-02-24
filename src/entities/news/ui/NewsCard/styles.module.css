@@ -1,8 +1,16 @@
-.item {
+.card {
   display: flex;
   width: 100%;
   gap: 12px;
 }
+
+.banner {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .title {
   font-size: 14px;
 }
